@@ -10,7 +10,7 @@ async function bootstrap() {
     const app = await NestFactory.create(AppModule);
     
     // const corsOrigin = process.env.CLIENT_ORIGIN || 'http://localhost:5173';
-    const corsOrigin = process.env.CLIENT_ORIGIN || 'https://ruang-kelas-client.vercel.app';
+    const corsOrigin = process.env.CLIENT_ORIGIN || 'https://ruang-kelas-alfalah.vercel.app';
     app.use((req: Request, res: Response, next: NextFunction) => {
       if (req.url && req.url.includes('//')) {
         req.url = req.url.replace(/\/\/+/, '/');
